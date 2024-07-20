@@ -37,7 +37,7 @@ export default function RootLayout({
           {children}
         </div>
         <div className="fixed bottom-0 w-full">
-          <div className="h-[56px] grid content-between bg-white pt-4">
+          <div className="h-[86px] grid content-between bg-white pt-4">
             <Footer />
           </div>
         </div>

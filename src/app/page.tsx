@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/pagination"
 import Title from "@/components/Title";
 import { StaticImageData } from "next/image";
+import { fontTitle } from "@/components/Font";
 
 export default function Home() {
   return (
@@ -114,7 +115,7 @@ function Notice() {
     <div className="mx-4">
       <Title title={'공지사항'} />
       <Container className="px-6 py-4">
-        <div className="font-semibold mb-2">공지사항</div>
+        <div className={fontTitle}>공지사항</div>
         <div className="line-clamp-3">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&aposs standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic</div>
       </Container>
       <Pagination>

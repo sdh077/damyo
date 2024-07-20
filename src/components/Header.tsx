@@ -1,3 +1,4 @@
+'use client'
 import { BiSearch, BiBell } from "react-icons/bi";
 import statusbar from '@public/statusbar.png'
 import profile from '@public/profile.png'
@@ -12,9 +13,20 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import Link from "next/link";
+import { useStore } from "@/zustand/store";
+import { usePathname } from "next/navigation";
 
 
 export default function Header() {
+    const pathname = usePathname()
+    const titleObject: { [x: string]: string } = {
+        '/': '',
+        '/manual': '매뉴얼',
+        '/schedule': '스케줄',
+        '/work': '출퇴근',
+        '/stock': '재고'
+    }
     return (
         <div className="">
             {/* <div className="flex justify-between">
@@ -22,8 +34,8 @@ export default function Header() {
                 <Image alt="" src={statusbar} width={140} height={54} />
             </div> */}
             <div className="flex justify-between pl-5 pr-[10px] py-2 w-full content-center">
-                <div className="w-[86px]"><Logo /></div>
-                <div className="grid content-center">HOME</div>
+                <div className="w-[86px]"><Link href='/'><Logo /></Link></div>
+                <div className="grid content-center">{titleObject[pathname] ?? ''}</div>
                 <div className="w-[86px] grid grid-cols-3 gap-2 content-center">
                     <BiSearch className="w-[24px] h-[24px]" />
                     <BiBell className="w-[24px] h-[24px]" />

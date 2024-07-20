@@ -17,10 +17,10 @@ import {
 export default function Header() {
     return (
         <div className="">
-            <div className="flex justify-between">
+            {/* <div className="flex justify-between">
                 <div className="w-[70px] h-[54px] grid place-items-center font-semibold text-md">9:41</div>
                 <Image alt="" src={statusbar} width={140} height={54} />
-            </div>
+            </div> */}
             <div className="flex justify-between pl-5 pr-[10px] py-2 w-full content-center">
                 <div className="w-[86px]"><Logo /></div>
                 <div className="grid content-center">HOME</div>

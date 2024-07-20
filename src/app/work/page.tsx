@@ -10,7 +10,7 @@ import { cn } from '@/lib/utils'
 
 export default function page() {
     const days = [1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    const box = 'p-4 w-14 h-14 text-sm flex items-center justify-center'
+    const box = 'p-4 w-14 h-14 text-sm flex items-center justify-center border-[0.5px]'
     const boxColor: { [x: number]: string } = {
         0: '',
         1: 'bg-primary-400 text-white',
@@ -29,8 +29,8 @@ export default function page() {
             </Container>
             <Title title={'출석현황 '} />
             <Container className='px-4 py-6'>
-                <div className={fontTitle}>May 2023</div>
-                <div className='grid grid-cols-7 gap-0 w-fit place-items-center justify-center mx-auto'>
+                <div className='font-bold text-2xl'>May 2023</div>
+                <div className='grid grid-cols-7 gap-0 w-fit place-items-center justify-center mx-auto mt-6'>
                     <div className={box}>Mo</div>
                     <div className={box}>Tu</div>
                     <div className={box}>We</div>

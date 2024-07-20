@@ -7,6 +7,8 @@ import Image from 'next/image'
 import React from 'react'
 import calendar from '@public/caldendar.png'
 import { cn } from '@/lib/utils'
+import { BiChevronRight } from "react-icons/bi";
+import Link from 'next/link'
 
 export default function page() {
     const days = [1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -27,7 +29,10 @@ export default function page() {
                     <div className='shadow inline p-1 ml-1 rounded-md'>09:00~18:00</div>
                 </div>
             </Container>
-            <Title title={'출석현황 '} />
+            <div className='flex justify-between mb-2'>
+                <Title title={'출석현황 '} />
+                <Link href={'/work/statistics'}><div className='flex'>통계 보기 <BiChevronRight size={'24px'} /></div></Link>
+            </div>
             <Container className='px-4 py-6'>
                 <div className='font-bold text-2xl'>May 2023</div>
                 <div className='grid grid-cols-7 gap-0 w-fit place-items-center justify-center mx-auto mt-6'>

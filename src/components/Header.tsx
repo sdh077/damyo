@@ -34,8 +34,11 @@ export default function Header() {
                 <Image alt="" src={statusbar} width={140} height={54} />
             </div> */}
             <div className="flex justify-between pl-5 pr-[10px] py-2 w-full content-center">
-                <div className="w-[86px]"><Link href='/'><Logo /></Link></div>
-                <div className="grid content-center">{titleObject[pathname] ?? ''}</div>
+                <div className="w-[106px] "><Link href='/' className="flex">
+                    <Logo />
+                    <div className="logo-font text-[32px] ml-2">담요</div>
+                </Link></div>
+                <div className="grid content-center font-bold text-lg">{titleObject[pathname] ?? ''}</div>
                 <div className="w-[86px] grid grid-cols-3 gap-2 content-center">
                     <BiSearch className="w-[24px] h-[24px]" />
                     <BiBell className="w-[24px] h-[24px]" />

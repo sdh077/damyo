@@ -1,9 +1,48 @@
 'use client'
+import { Container } from '@/components/Container'
+import { fontSmall, fontTitle } from '@/components/Font'
+import Title from '@/components/Title'
+import { Button } from '@/components/ui/button'
+import Image from 'next/image'
 import React from 'react'
+import calendar from '@public/caldendar.png'
+import { cn } from '@/lib/utils'
 
 export default function page() {
+    const days = [1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    const box = 'p-4 w-14 h-14 text-sm flex items-center justify-center'
+    const boxColor: { [x: number]: string } = {
+        0: '',
+        1: 'bg-primary-400 text-white',
+        2: 'bg-primary-500 text-white',
+    }
     return (
-        <div className='flex'>
+        <div className='mx-4'>
+            <Container className='text-center w-full py-8 mb-16'>
+                <div className='text-gray-500'>7/10 수요일</div>
+                <div className='text-2xl'>11:18:48</div>
+                <Button className='font-bold rounded-full my-2' size={'lg'} variant='black'>출근하기</Button>
+                <div className={fontSmall + 'mt-8'}>
+                    내 근무 시간
+                    <div className='shadow inline p-1 ml-1 rounded-md'>09:00~18:00</div>
+                </div>
+            </Container>
+            <Title title={'출석현황 '} />
+            <Container className='px-4 py-6'>
+                <div className={fontTitle}>May 2023</div>
+                <div className='grid grid-cols-7 gap-0 w-fit place-items-center justify-center mx-auto'>
+                    <div className={box}>Mo</div>
+                    <div className={box}>Tu</div>
+                    <div className={box}>We</div>
+                    <div className={box}>Th</div>
+                    <div className={box}>Fr</div>
+                    <div className={box}>Sa</div>
+                    <div className={box}>Su</div>
+                    {days.map((day, i) =>
+                        <div key={i} className={cn(box, boxColor[day])}>{i + 1}</div>
+                    )}
+                </div>
+            </Container>
         </div>
     )
 }

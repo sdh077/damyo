@@ -26,7 +26,7 @@ export default function RootLayout({
 
       <body
         className={cn(
-          "bg-background font-sans antialiased bg-custom-background",
+          "bg-background font-sans antialiased bg-custom-background max-w-[500px]",
           fontSans.variable
         )}
       >

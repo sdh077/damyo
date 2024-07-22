@@ -28,7 +28,7 @@ export default function Header() {
         '/stock': '재고'
     }
     return (
-        <div className="max-w-[500px]">
+        <div className="max-w-[500px] bg-[#FAFAFA]">
             {/* <div className="flex justify-between">
                 <div className="w-[70px] h-[54px] grid place-items-center font-semibold text-md">9:41</div>
                 <Image alt="" src={statusbar} width={140} height={54} />

@@ -42,8 +42,10 @@ function ChatProfile({ src, name, talked, count }: { src: StaticImageData, name:
       </div>
       {count !== 0 &&
         <div>
-          <div className="rounded-full bg-primary m-2 px-2 text-white">
-            {count}
+          <div className="rounded-full bg-primary m-2 px-2 min-w-8 py-1 text-white">
+            <div className="w-full text-center">
+              {count}
+            </div>
           </div>
         </div>}
     </div>

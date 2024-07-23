@@ -26,15 +26,16 @@ export default function RootLayout({
 
       <body
         className={cn(
-          "bg-background font-sans antialiased ",
+          "bg-white font-sans antialiased ",
           fontSans.variable
         )}
       >
         <div className="bg-custom-background max-w-[500px] min-h-[100vh]">
-          <div className="w-full fixed top-0 ">
+          <div className="w-full fixed top-0 mb-4">
             <Header />
           </div>
-          <div className="py-[118px]">
+          <div className="h-[86px]"></div>
+          <div className="pb-[108px]">
             {children}
           </div>
           <div className="fixed bottom-0 w-full">

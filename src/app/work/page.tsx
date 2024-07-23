@@ -15,7 +15,7 @@ export default function page() {
     const box = 'p-4 w-14 h-14 text-sm flex items-center justify-center border-[0.5px]'
     const boxColor: { [x: number]: string } = {
         0: '',
-        1: 'bg-primary-400 text-white',
+        1: 'bg-primary text-white',
         2: 'bg-primary-500 text-white',
     }
     return (

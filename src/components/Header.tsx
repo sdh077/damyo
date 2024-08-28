@@ -40,7 +40,7 @@ export default function Header() {
                 </Link></div>
                 <div className="grid content-center font-bold text-lg">{titleObject[pathname] ?? ''}</div>
                 <div className="w-[86px] grid grid-cols-3 gap-2 content-center">
-                    <BiSearch className="w-[24px] h-[24px]" />
+                    <Link href={"/search"} ><BiSearch className="w-[24px] h-[24px]" /></Link>
                     <BiBell className="w-[24px] h-[24px]" />
                     <DD />
                 </div>

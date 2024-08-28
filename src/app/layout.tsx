@@ -26,23 +26,12 @@ export default function RootLayout({
 
       <body
         className={cn(
-          "bg-white font-sans antialiased ",
+          "bg-white Pretendard-Regular antialiased ",
           fontSans.variable
         )}
       >
         <div className="bg-custom-background max-w-[500px] min-h-[100vh]">
-          <div className="w-full fixed top-0 mb-4">
-            <Header />
-          </div>
-          <div className="h-[86px]"></div>
-          <div className="pb-[108px]">
-            {children}
-          </div>
-          <div className="fixed bottom-0 w-full">
-            <div className="max-w-[500px] h-[86px] grid content-between bg-white pt-4">
-              <Footer />
-            </div>
-          </div>
+          {children}
         </div>
       </body>
     </html>

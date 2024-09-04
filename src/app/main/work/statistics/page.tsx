@@ -81,7 +81,7 @@ function WorkGraph() {
     return (
         <div className='mx-4 mt-8'>
             <Title title={'그래프'} />
-            <Container className='mt-4'>
+            <Container className='my-4'>
                 <ChartContainer config={chartConfig} className="min-h-[200px] max-w-[500px] mx-auto">
                     <PieChart accessibilityLayer data={chartData}>
                         <Pie data={data} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={80} labelLine={false} label={renderCustomizedLabel} >
@@ -91,6 +91,17 @@ function WorkGraph() {
                         </Pie>
                     </PieChart>
                 </ChartContainer>
+                <div className='mx-6 flex flex-col gap-3'>
+                    {data.map((item, index) =>
+                        <div key={index} className='flex items-center justify-between gap-3'>
+                            <div className='flex items-center justify-start gap-3'>
+                                <div className={`rounded-full w-3 h-3`} style={{ backgroundColor: COLORS[index] }} />
+                                <div>{item.name}</div>
+                            </div>
+                            <div className='font-medium'>{item.value}</div>
+                        </div>
+                    )}
+                </div>
             </Container>
         </div>
     )

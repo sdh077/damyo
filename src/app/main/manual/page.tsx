@@ -3,7 +3,7 @@ import React from 'react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
-import { Input } from "@/components/ui/input"
+import { InputIcon } from "@/components/ui/inputIcon"
 import { Container } from '@/components/Container'
 import { fontSmall, fontTitle } from '@/components/Font'
 import Link from 'next/link'
@@ -16,6 +16,7 @@ import {
 
 import menu1 from '@public/menu/menu1.png'
 import Image from 'next/image'
+import { BsSearch } from 'react-icons/bs'
 
 export default function page() {
     const recipe = [
@@ -81,11 +82,11 @@ function ManualContent() {
     return (
         <>
             <ManualCategory />
-            <div className='mt-10'>
-                <Input placeholder="무엇을 찾으시나요?" />
+            <div className='my-4'>
+                <InputIcon placeholder="무엇을 찾으시나요?" Icon={BsSearch} />
             </div>
             {manuals.map(manual =>
-                <Link key={manual.title} href='/manual/1'>
+                <Link key={manual.title} href='/main/manual/1'>
                     <Container className='mt-4' >
                         <ManualCard title={manual.title} content={manual.content} writer={manual.writer} date={manual.date} />
                     </Container>
@@ -113,12 +114,12 @@ function ManualCategory() {
     return (
         <div className="mx-4">
             <div className="flex gap-6 overflow-x-auto py-4">
-                <Button className={cn(" h-12 shadow", active)}>고객응대</Button>
-                <Button className={cn(" h-12 shadow", def)}>음료제조</Button>
-                <Button className={cn(" h-12 shadow", def)}> 스케줄관리</Button >
-                <Button className={cn(" h-12 shadow", def)}>카테고리</Button>
-                <Button className={cn(" h-12 shadow", def)}>신규응대</Button>
-                <Button className={cn(" h-12 shadow", def)}>재고</Button>
+                <Button variant={'secondaryActive'} className={cn("shadow")}>고객응대</Button>
+                <Button variant={'secondary'} className={cn("shadow")}>음료제조</Button>
+                <Button variant={'secondary'} className={cn("shadow")}> 스케줄관리</Button >
+                <Button variant={'secondary'} className={cn("shadow")}>카테고리</Button>
+                <Button variant={'secondary'} className={cn("shadow")}>신규응대</Button>
+                <Button variant={'secondary'} className={cn("shadow")}>재고</Button>
             </div >
         </div >
     )

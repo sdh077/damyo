@@ -61,7 +61,7 @@ export default function page() {
             <div className='flex justify-between'>
                 <Title title={'재고 요청'} />
                 <Select>
-                    <SelectTrigger className="w-[180px]">
+                    <SelectTrigger className="w-[180px] bg-white">
                         <SelectValue placeholder="정렬" defaultValue={'name'} />
                     </SelectTrigger>
                     <SelectContent>

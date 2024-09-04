@@ -33,8 +33,7 @@ import { cn } from "@/lib/utils";
 
 export default function Home() {
   return (
-    <div className="">
-      {/* <div onClick={() => document.location.href = '/work'}>test</div> */}
+    <div className="flex flex-col gap-4 mt-4">
       <Notice />
       <FavoriteBtn />
       <ChatList />
@@ -94,7 +93,7 @@ function ChatList() {
     }
   ]
   return (
-    <div className="mx-4">
+    <div className="mx-4 mt-4">
       <Title title={'채팅 리스트'} />
 
       <Container>
@@ -110,7 +109,7 @@ function ChatList() {
 function FavoriteBtn() {
   return (
     <div className="mx-4">
-      <Title title={'공지사항'} />
+      <Title title={'즐겨찾기'} />
       <div className="flex gap-6 overflow-x-auto py-4">
         <Button className="w-12 h-12 bg-gray-300 shadow text-black"><BiPlus /></Button>
         <Button className="w-12 h-12 bg-white shadow text-black">재고</Button>
@@ -142,9 +141,6 @@ function Notice() {
     })
   }, [api])
 
-  if (!api) {
-    return
-  }
   return (
     <div className="mx-4">
       <Title title={'공지사항'} />
@@ -163,7 +159,7 @@ function Notice() {
         <PaginationContent>
           {[0, 1, 2, 3, 4].map(i =>
             <PaginationItem key={i}>
-              <PaginationLink onClick={() => api.scrollTo(i)}><div className={cn("rounded-full w-1 h-1 p-2", current === i + 1 ? 'bg-primary' : 'bg-[#D9D9D9]')}></div></PaginationLink>
+              <PaginationLink onClick={() => api?.scrollTo(i)}><div className={cn("rounded-full w-1 h-1 p-2", current === i + 1 ? 'bg-primary' : 'bg-[#D9D9D9]')}></div></PaginationLink>
             </PaginationItem>
           )}
         </PaginationContent>

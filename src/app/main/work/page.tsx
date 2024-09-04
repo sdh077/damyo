@@ -22,16 +22,16 @@ export default function page() {
         <div className='mx-4'>
             <Container className='text-center w-full py-8 mb-16'>
                 <div className='text-gray-500'>7/10 수요일</div>
-                <div className='text-2xl'>11:18:48</div>
-                <Button className='font-bold rounded-full my-2' size={'lg'} variant='black'>출근하기</Button>
-                <div className={fontSmall + 'mt-8'}>
+                <div className='text-4xl font-semibold'>11:18:48</div>
+                <Button className='font-bold rounded-full my-2' size={'lg'} variant='outline'>출근하기</Button>
+                <div className={fontSmall + 'mt-8 h-16 flex items-center justify-center'}>
                     내 근무 시간
-                    <div className='shadow inline p-1 ml-1 rounded-md'>09:00~18:00</div>
+                    <div className='shadow inline px-4 py-1 ml-1 rounded-md'>09:00~18:00</div>
                 </div>
             </Container>
             <div className='flex justify-between mb-2'>
                 <Title title={'출석현황 '} />
-                <Link href={'/work/statistics'}><div className='flex'>통계 보기 <BiChevronRight size={'24px'} /></div></Link>
+                <Link href={'work/statistics'}><div className='flex'>통계 보기 <BiChevronRight size={'24px'} /></div></Link>
             </div>
             <Container className='px-4 py-6'>
                 <div className='font-bold text-2xl'>May 2023</div>

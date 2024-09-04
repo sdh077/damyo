@@ -13,9 +13,9 @@ export default function page() {
             <div>
                 <div className='flex justify-between my-4'>
                     <Title title={'스케줄'} />
-                    <div className='grid grid-cols-2 gap-2 '>
-                        <Link href={''}><Button variant={'link'} color='primary' className='opacity-40' >변경 요청</Button></Link>
-                        <Link href={''}><Button variant={'link'} color='primary' className='opacity-40'>교환 요청</Button></Link>
+                    <div className='grid grid-cols-2 '>
+                        {/* <Link href={''}><Button variant={'link'} color='primary' className='opacity-40' >변경 요청</Button></Link>
+                        <Link href={''}><Button variant={'link'} color='primary' className='opacity-40'>교환 요청</Button></Link> */}
                     </div>
                 </div>
                 <Container className='p-4'>
@@ -23,27 +23,27 @@ export default function page() {
                         <div>
                             <BiChevronLeft />
                         </div>
-                        <div className=''>
+                        <div className='text-xs'>
                             <div>13</div>
                             <div>Mo</div>
                         </div>
-                        <div className=''>
+                        <div className='text-xs'>
                             <div>14</div>
                             <div>Tu</div>
                         </div>
-                        <div className=''>
+                        <div className='text-xs'>
                             <div>15</div>
                             <div>We</div>
                         </div>
-                        <div className=''>
+                        <div className='text-xs'>
                             <div>16</div>
                             <div>Th</div>
                         </div>
-                        <div className=''>
+                        <div className='text-xs'>
                             <div>17</div>
                             <div>Fr</div>
                         </div>
-                        <div className=''>
+                        <div className='text-xs'>
                             <div>18</div>
                             <div>Sa</div>
                         </div>
@@ -84,19 +84,27 @@ export default function page() {
                     </div>
 
                 </Container>
-                {/* <div className='mx-4'>
-                    <div className='my-2 flex h-full'>
-                        <div className='bg-primary text-white w-4 text-center align-middle h-max'>6</div>
-                        <div>
-                            <div>
-                                07/14/오픈
-                            </div>
-                            <div>
-                                10:00~15:00 to 10:00~14:00
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
+                <div className='mx-4'>
+                    <RequestItem />
+                    <RequestItem />
+                    <RequestItem />
+                </div>
+            </div>
+        </div>
+    )
+}
+
+function RequestItem() {
+    return (
+        <div className='my-2 grid grid-rows-1 grid-flow-col'>
+            <div className='row-span-1 bg-primary text-white w-8 text-center h-full content-center'>6</div>
+            <div className='col-span-8'>
+                <div>
+                    07/14/오픈
+                </div>
+                <div className='text-sm font-light'>
+                    10:00~15:00 to 10:00~14:00
+                </div>
             </div>
         </div>
     )

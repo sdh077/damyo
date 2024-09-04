@@ -8,7 +8,7 @@ import profile from '@public/profile/profile1.png'
 export default function page() {
     return (
         <div className=''>
-            <div className='bg-white px-5 py-4'>
+            <div className='bg-white px-5 py-4 h-[calc(100vh-320px)]'>
                 <div className='flex justify-between'>
                     <div className={cn(fontTitle, 'text-3xl mb-1')}>손님 입장시 응대 방법</div>
                     <div className='flex flex-col justify-end'>
@@ -33,17 +33,17 @@ export default function page() {
                     <div>
                         이전글
                     </div>
-                    <div className='mx-4'>|</div>
+                    <div className='mx-4 text-[#999]'>|</div>
                     <div>
                         고객응대에 대한 메뉴얼
                     </div>
                 </div>
-                <hr className='my-2 border-t-[1px] border-[#999]	' />
+                <hr className='my-2 border-t-[1px] bg-[#999]' />
                 <div className='flex'>
                     <div>
                         다음글
                     </div>
-                    <div className='mx-4'>|</div>
+                    <div className='mx-4 text-[#999]'>|</div>
                     <div>
                         음료제조에 대한 메뉴얼
                     </div>

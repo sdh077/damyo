@@ -37,8 +37,15 @@ const config = {
           500: '#E0A75E',
         },
         secondary: {
-          DEFAULT: "var(--secondary)",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: '#171A41',
+          foreground: "hsl(var(--primary-foreground))",
+          200: '#FFEDD5',
+          300: '#F5E7B2',
+          400: '#F9D689',
+          500: '#E0A75E',
+        },
+        gray: {
+          DEFAULT: '#C1C1D1'
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",

@@ -73,6 +73,10 @@
   }
 }
 
+body {
+  font-family: Pretendard-Regular
+}
+
 @layer base {
   * {
     @apply border-border;

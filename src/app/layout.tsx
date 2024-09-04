@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { Inter as FontSans } from "next/font/google"
 import { cn } from "@/lib/utils";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -30,7 +27,7 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <div className="bg-custom-background max-w-[500px] min-h-[100vh]">
+        <div className="bg-custom-background max-w-[500px] min-h-[100vh] mx-auto">
           {children}
         </div>
       </body>
